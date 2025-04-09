@@ -1,0 +1,33 @@
+media_queries = """
+/* Tablet View */
+@media (min-width: 772px) {
+    div {
+        width: 45vw;
+        display: inline-block;
+        margin: 5px;
+        padding: 2px;
+    }
+
+    div img {
+        height: 30vh;
+        width: auto;
+    }
+}
+
+/* Large Screen View */
+@media (min-width: 998px) {
+    div {
+        width: 30vw;
+    }
+}
+"""
+
+# Append the media queries to the existing CSS
+updated_css = original_css + "\n" + media_queries
+
+# Save the updated CSS back to the file
+with open(css_file_path, "w") as f:
+    f.write(updated_css)
+
+# Confirm update success
+media_queries.strip()
